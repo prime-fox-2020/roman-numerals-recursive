@@ -4,9 +4,10 @@ function toRoman(num) {
   [400, 'CD'], [500, 'D'], [900, 'CM'], [1000, 'M']];
 
   for (let i = dictionary.length-1; i >=0; i--) {
-    while (num >= dictionary[i][0]) {
+    if (num >= dictionary[i][0]) {
       output += dictionary[i][1];
-      num -= dictionary[i][0];
+      output += toRoman(num - dictionary[i][0]);
+      break;
     }
   }
 
