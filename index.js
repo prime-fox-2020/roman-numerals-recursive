@@ -1,4 +1,16 @@
 function toRoman(num) {
+    var angkaRomawi = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
+    var nilaiRomawi = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M']
+    var romawi = ''
+    while (num != 0) {
+        for (i = angkaRomawi.length - 1; i >= 0; i--) {
+            if (num >= angkaRomawi[i]) {
+                romawi += nilaiRomawi[i]
+                return romawi + toRoman((num -= angkaRomawi[i]))
+            }
+        }
+    }
+    return romawi;
 
 }
 
