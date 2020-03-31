@@ -14,9 +14,8 @@ function toRoman(num) {
         ['IV', 4],
         ['I', 1]]
 
-    var hasil = ''
-
     //Non Recursive
+    //var hasil = ''
     // for (let i = 0; i < angkaRomawi.length; i++) {
     //     while (num >= angkaRomawi[i][1]) {
     //         hasil += angkaRomawi[i][0]
@@ -28,7 +27,7 @@ function toRoman(num) {
     //Recursive
     for (let i = 0; i < angkaRomawi.length; i++) {
         if (num >= angkaRomawi[i][1]) {
-            return hasil += angkaRomawi[i][0] + toRoman(num - angkaRomawi[i][1])
+            return angkaRomawi[i][0] + toRoman(num - angkaRomawi[i][1])
         } else if (num == 0) {
             return ''
         }
