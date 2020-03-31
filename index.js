@@ -1,5 +1,4 @@
 function toRoman(num) {
-
     var array = [
         [1000, 'M'],
         [900, 'CM'],
@@ -24,9 +23,7 @@ function toRoman(num) {
             return array[i][1] + toRoman(num - array[i][0])
         }
     }
-
 }
-
 
 // Drive code
 console.log("My totally sweet testing script for new roman\n");
