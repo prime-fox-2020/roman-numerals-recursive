@@ -1,4 +1,7 @@
 function toRoman(num) {
+    if(num>3000){
+        return "Maksimal input adalah 3000"
+    }
 
     let output = ''
 
