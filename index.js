@@ -30,7 +30,7 @@ function toRoman(num) {
 
 
     for (let key in romanList){
-        if (num == 0) {
+        if (num == 0 || num > 3000) {
             return result
         } else if (num >= romanList[key]){
                 result += key
@@ -48,7 +48,7 @@ console.log("4     | IV       | ", toRoman(4));
 console.log("9     | IX       | ", toRoman(9));
 console.log("13    | XIII     | ", toRoman(13));
 console.log("1453  | MCDLIII  | ", toRoman(1453));
-console.log("1646  | MDCXLVI  | ", toRoman(3645));
+console.log("1646  | MDCXLVI  | ", toRoman(1645));
 
 //abaikan code dibawah ini
 module.exports = toRoman
