@@ -20,8 +20,7 @@ function toRoman(num) {
     else {
         for (var i = 0; i < roman.length; i++) {
             while (num >= roman[i][0]) {
-                actualresult += roman[i][1]
-                return actualresult + toRoman(num - roman[i][0])
+                return roman[i][1]+actualresult
             }
         }
     }
